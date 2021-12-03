@@ -1,0 +1,43 @@
+<br>
+
+
+<table class="table table-striped table-bordered table-hover display">
+    <thead>
+        <tr>
+            <th>Mascota</th>
+            <th>Usuario</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of inc">
+            <td>
+                Nombre: {{x.adop_mas_id.mas_nom}}
+                <br>
+                Raza: {{x.adop_mas_id.mas_raz}}
+                <br>
+                Edad: {{x.adop_mas_id.mas_ed}}
+            </td>
+            <td>
+                Nombre: {{x.adop_usua_id.usua_nom}}
+                <br>
+                Apellido: {{x.adop_usua_id.usua_ape}}
+                <br>
+                Teléfono: {{x.adop_usua_id.usua_tel}}
+                <br>
+                Documento: {{x.adop_usua_id.usua_doc}}
+                <br>
+                Email: {{x.adop_usua_id.usua_email}}
+                <br>
+                Contraseña: {{x.adop_usua_id.usua_contr}}
+            </td>
+
+            <td>
+                <button (click)="formularioEditar(x.adop_id)" class="btn btn-warning">Editar</button>
+                <button (click)="eliminar(x.adop_id)" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>

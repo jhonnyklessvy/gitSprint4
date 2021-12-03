@@ -1,0 +1,14 @@
+<br>
+<h1>Actualizar Mascota</h1>
+<hr>
+<p>Mascota:</p>
+<input type="text" [(ngModel)]="m.mas_nom" placeholder="Nombre de la mascota" class="form-control">
+<hr>
+<p>Raza:</p>
+<input type="text" [(ngModel)]="m.mas_raz" placeholder="Raza de la mascota" class="form-control">
+<hr>
+<p>Edad:</p>
+<input type="number" [(ngModel)]="m.mas_ed" placeholder="Edad de la mascota" class="form-control">
+<hr>
+<button (click)="actualizar()" class="btn btn-success">Actualizar</button>
+<button (click)="Cancelar()" class="btn btn-danger">Cancelar</button>

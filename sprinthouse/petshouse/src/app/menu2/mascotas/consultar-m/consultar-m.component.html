@@ -1,0 +1,26 @@
+<br>
+
+<table id="t_mas" class="table table-striped table-bordered table-hover display" >
+
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Raza</th>
+            <th>Edad</th>
+            <th>Opciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of inc">
+            <td>{{x.mas_nom}}</td>
+            <td>{{x.mas_raz}}</td>
+            <td>{{x.mas_ed}}</td>
+            <td>
+                <button (click)="formularioEditar(x.mas_id)" class="btn btn-warning">Editar</button>
+                <button (click)="eliminar(x.mas_id)" class="btn btn-danger">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>

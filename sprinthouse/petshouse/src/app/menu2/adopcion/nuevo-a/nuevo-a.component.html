@@ -1,0 +1,22 @@
+<br>
+<h1>Nuevo Usuario</h1>
+<hr>
+<p>Nombre:</p>
+<input type="text" [(ngModel)]="m.usua_nom" placeholder="Nombre del usuario" class="form-control">
+<hr>
+<p>Apellido:</p>
+<input type="text" [(ngModel)]="m.usua_ape" placeholder="Apellido del usuario" class="form-control">
+<hr>
+<p>Teléfono:</p>
+<input type="number" [(ngModel)]="m.usua_tel" placeholder="Teléfono del usuario" class="form-control">
+<hr>
+<p>Documento:</p>
+<input type="number" [(ngModel)]="m.usua_doc" placeholder="Documento del usuario" class="form-control">
+<hr>
+<p>Email:</p>
+<input type="email" [(ngModel)]="m.usua_email" placeholder="Email del usuario" class="form-control">
+<hr>
+<p>Contraseña:</p>
+<input type="password" [(ngModel)]="m.usua_tel" placeholder="Contraseña del usuario" class="form-control">
+<hr>
+<button (click)="guardar()" class="btn btn-success">Guardar</button>

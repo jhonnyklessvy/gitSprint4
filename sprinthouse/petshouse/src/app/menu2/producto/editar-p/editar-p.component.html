@@ -1,0 +1,14 @@
+<br>
+<h1>Actualizar Producto</h1>
+<hr>
+<p>Producto:</p>
+<input type="text" [(ngModel)]="m.mas_nom" placeholder="Nombre del producto" class="form-control">
+<hr>
+<p>Color:</p>
+<input type="text" [(ngModel)]="m.pro_col" placeholder="Color del producto" class="form-control">
+<hr>
+<p>Precio:</p>
+<input type="text" [(ngModel)]="m.pro_pre" placeholder="Precio del producto" class="form-control">
+<hr>
+<button (click)="actualizar()" class="btn btn-success">Actualizar</button>
+<button (click)="Cancelar()" class="btn btn-danger">Cancelar</button>

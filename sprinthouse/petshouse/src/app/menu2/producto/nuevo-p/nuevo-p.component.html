@@ -1,0 +1,13 @@
+<br>
+<h1>Nuevo Producto</h1>
+<hr>
+<p>Producto:</p>
+<input type="text" [(ngModel)]="m.mas_nom" placeholder="Nombre del producto" class="form-control">
+<hr>
+<p>Color:</p>
+<input type="text" [(ngModel)]="m.pro_col" placeholder="Color del producto" class="form-control">
+<hr>
+<p>Precio:</p>
+<input type="text" [(ngModel)]="m.pro_pre" placeholder="Precio del producto" class="form-control">
+<hr>
+<button (click)="guardar()" class="btn btn-success">Guardar</button>
