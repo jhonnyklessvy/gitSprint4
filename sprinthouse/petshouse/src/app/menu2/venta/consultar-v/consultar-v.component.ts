@@ -18,7 +18,7 @@ export class ConsultarVComponent implements OnInit {
   
   listar(): void {
 
-    this.http.get("http://localhost:8989/Venta/consul", { responseType: "json" })
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Venta/consul", { responseType: "json" })
       .subscribe((res: any) => {
         console.log(res);
         this.inc=res;
@@ -27,7 +27,7 @@ export class ConsultarVComponent implements OnInit {
   }
 
   eliminar(x: any): void {
-    this.http.delete("http://localhost:8989/Venta/elim/" + x)
+    this.http.delete("http://petshouse.jelastic.saveincloud.net/Venta/elim/" + x)
       .subscribe((res: any) => {
         console.log(res);
         this.listar();

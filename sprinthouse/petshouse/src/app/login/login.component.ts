@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   }
 
   iniciar(): void {
-    this.http.get("http://localhost:8989/Usuario/consultarPorVariosParametros/" + this.m.usua_nom + "/" + this.m.usua_contr + "", { responseType: "json" })
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Usuario/consultarPorVariosParametros/" + this.m.usua_nom + "/" + this.m.usua_contr + "", { responseType: "json" })
       .subscribe((res: any) => {
         console.log(res);
 

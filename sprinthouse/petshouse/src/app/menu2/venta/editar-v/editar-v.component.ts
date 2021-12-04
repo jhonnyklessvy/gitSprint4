@@ -32,7 +32,7 @@ export class EditarVComponent implements OnInit {
 
   ngOnInit(): void {
     this.m.ven_id = this.rouvar.snapshot.params["x"];
-    this.http.get("http://localhost:8989/Venta/consul/" + this.m.ven_id, { responseType: "json" })
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Venta/consul/" + this.m.ven_id, { responseType: "json" })
       .subscribe((res: any) => {
         console.log(res);
         this.m.ven_pro_id.pro_nom = res.ven_pro_id.pro_nom;
@@ -49,7 +49,7 @@ export class EditarVComponent implements OnInit {
       });
   }
   actualizar(): void {
-    this.http.put("http://localhost:8989/Venta/modif/" + this.m.ven_id, this.m)
+    this.http.put("http://petshouse.jelastic.saveincloud.net/Venta/modif/" + this.m.ven_id, this.m)
       .subscribe((res: any) => {
         console.log(res);
         alert("Registrado Satisfactiamente");

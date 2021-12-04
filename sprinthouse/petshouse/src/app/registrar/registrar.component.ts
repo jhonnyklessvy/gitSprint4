@@ -26,7 +26,7 @@ export class RegistrarComponent implements OnInit {
   }
 
   guardar(): void {
-    this.http.post("http://localhost:8989/Usuario/crear", this.m)
+    this.http.post("http://petshouse.jelastic.saveincloud.net/Usuario/crear", this.m)
       .subscribe((res: any) => {
         console.log(res);
         alert("Registrado satisfactoriamente")

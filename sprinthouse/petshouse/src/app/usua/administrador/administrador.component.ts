@@ -23,7 +23,7 @@ export class AdministradorComponent implements OnInit {
 
 
   iniciar(): void{
-    this.http.get("http://localhost:8989/Admin/consultarPorVariosParametros/" + this.m.admin_usua + "/" + this.m.admin_contr + "", { responseType: "json" })
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Admin/consultarPorVariosParametros/" + this.m.admin_usua + "/" + this.m.admin_contr + "", { responseType: "json" })
       .subscribe((res: any) => {
         console.log(res);
 

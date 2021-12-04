@@ -33,7 +33,7 @@ export class NuevoAComponent implements OnInit {
   }
 
   guardar():void{
-    this.http.post("http://localhost:8989/Adopcion/crear",this.m)
+    this.http.post("http://petshouse.jelastic.saveincloud.net/Adopcion/crear",this.m)
     .subscribe((res:any)=>{
       console.log(res);
       alert("Registrado satisfactoriamente")

@@ -18,7 +18,7 @@ export class ConsultarMComponent implements OnInit {
 
   listar(): void{
 
-    this.http.get("http://localhost:8989/Mascota/consul",{responseType:"json"})
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Mascota/consul",{responseType:"json"})
     .subscribe((res:any)=>{
 
      this.inc=res;
@@ -29,7 +29,7 @@ export class ConsultarMComponent implements OnInit {
   }
 
   eliminar(x:any):void{
-    this.http.delete("http://localhost:8989/Mascota/elim/"+x)
+    this.http.delete("http://petshouse.jelastic.saveincloud.net/Mascota/elim/"+x)
     .subscribe((res:any)=>{
       console.log(res);
      this.listar();

@@ -31,7 +31,7 @@ export class EditarAComponent implements OnInit {
 
   ngOnInit(): void {
     this.m.adop_id = this.rouvar.snapshot.params["x"];
-    this.http.get("http://localhost:8989/Adopcion/consul/" + this.m.adop_id, { responseType: "json" })
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Adopcion/consul/" + this.m.adop_id, { responseType: "json" })
       .subscribe((res: any) => {
         console.log(res);
         this.m.adop_mas_id.mas_nom = res.adop_mas_id.mas_nom;
@@ -48,7 +48,7 @@ export class EditarAComponent implements OnInit {
       });
   }
   actualizar(): void {
-    this.http.put("http://localhost:8989/Adopcion/modif/" + this.m.adop_id, this.m)
+    this.http.put("http://petshouse.jelastic.saveincloud.net/Adopcion/modif/" + this.m.adop_id, this.m)
       .subscribe((res: any) => {
         console.log(res);
         alert("Registrado Satisfactiamente");

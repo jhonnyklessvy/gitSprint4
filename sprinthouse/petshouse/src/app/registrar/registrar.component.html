@@ -1,64 +1,52 @@
-<section class="vh-100" style="background-color: #5efc50;">
-    <div class="container py-5 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                    <div class="card-body p-5 text-center">
-                        <form (submit)="guardar()" ngNativeValidate>
-                            <h3 class="mb-5">registro</h3>
-
-                            <div class="form-outline mb-4">
-                                <input type="text" name="nom" [(ngModel)]="m.usua_nom"
-                                    class="form-control form-control-lg" />
-                                <label class="form-label" for="typeEmailX-2">Nombre</label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <input type="text" name="ape" [(ngModel)]="m.usua_ape"
-                                    class="form-control form-control-lg" />
-                                <label class="form-label" for="typeEmailX-2">Apellido</label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <input type="text" name="tel" [(ngModel)]="m.usua_tel"
-                                    class="form-control form-control-lg" />
-                                <label class="form-label" for="typeEmailX-2">Teléfono</label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <input type="text" name="doc" [(ngModel)]="m.usua_doc"
-                                    class="form-control form-control-lg" />
-                                <label class="form-label" for="typeEmailX-2">Documento</label>
-                            </div>
-
-                            <div class="form-outline mb-4">
-                                <input type="email" name="email" [(ngModel)]="m.usua_email"
-                                    class="form-control form-control-lg" />
-                                <label class="form-label" for="typeEmailX-2">Email</label>
-                            </div>
-                            <div class="form-outline mb-4">
-                                <input type="password" name="contra" [(ngModel)]="m.usua_contr"
-                                    class="form-control form-control-lg" />
-                                <label class="form-label" for="typePasswordX-2">Contraseña</label>
-                            </div>
-
-
-
-                            <button (click)="guardar()" class="btn btn-primary btn-lg btn-block">Registrarce</button>
-
-                            <hr class="my-4">
-
-                            <p class="mb-0">¿Ya tiene una cuenta?</p>
-
-                            <button (click)="goIniciarsecion()" class="btn btn-lg btn-block btn-primary"
-                                style="background-color: #4cdd39;">Inicie Seción</button>
-                        </form>
-
-
+<div class="container contact">
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-9">
+            <div class="contact-form">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="fname">Nombre de Usuario:</label>
+                    <div class="col-sm-10">
+                        <input type="text" [(ngModel)]="m.usua_nom" class="form-control" id="fname" placeholder="Nombre del usuario" name="nom">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="lname">Apellido:</label>
+                    <div class="col-sm-10">
+                        <input type="text" [(ngModel)]="m.usua_ape" class="form-control" id="lname" placeholder="Apellido del usuario" name="ape">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Teléfono:</label>
+                    <div class="col-sm-10">
+                        <input type="number" [(ngModel)]="m.usua_tel" class="form-control" id="email" placeholder="Teléfono del usuario" name="tel">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Documento:</label>
+                    <div class="col-sm-10">
+                        <input type="number" [(ngModel)]="m.usua_doc" class="form-control" id="email" placeholder="Documento del usuario" name="doc">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" [(ngModel)]="m.usua_email" class="form-control" id="email" placeholder="Email del usuario" name="email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Contraseña:</label>
+                    <div class="col-sm-10">
+                        <input type="password" [(ngModel)]="m.usua_contr" class="form-control" id="email" placeholder="Contraseña del usuario" name="contr">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" (click)="guardar()" class="btn btn-default" style="background-color:deepskyblue">Registrarce</button>
+                        <button type="submit" (click)="goIniciarsecion()" class="btn btn-default" style="background-color: #4cdd39;">Inicie Sesión</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-</section>
+</div>

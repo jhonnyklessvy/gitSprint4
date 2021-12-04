@@ -19,7 +19,7 @@ export class EditarMComponent implements OnInit {
 
   ngOnInit(): void {
     this.m.mas_id=this.rouvar.snapshot.params["x"];
-    this.http.get("http://localhost:8989/Mascota/consul/"+this.m.mas_id,{ responseType:"json"})
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Mascota/consul/"+this.m.mas_id,{ responseType:"json"})
     .subscribe((res:any)=>{
     console.log(res);
     this.m.mas_nom=res.mas_nom;
@@ -31,7 +31,7 @@ export class EditarMComponent implements OnInit {
   }
 
   actualizar(): void {
-    this.http.put("http://localhost:8989/Mascota/modif/" + this.m.mas_id, this.m)
+    this.http.put("http://petshouse.jelastic.saveincloud.net/Mascota/modif/" + this.m.mas_id, this.m)
       .subscribe((res:any) => {
         console.log(res);
         alert("Registrado Satisfactiamente");

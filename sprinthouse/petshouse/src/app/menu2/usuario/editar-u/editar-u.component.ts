@@ -22,7 +22,7 @@ export class EditarUComponent implements OnInit {
 
   ngOnInit(): void {
     this.m.usua_id = this.rouvar.snapshot.params["x"];
-    this.http.get("http://localhost:8989/Usuario/consul/" + this.m.usua_id, { responseType: "json" })
+    this.http.get("http://petshouse.jelastic.saveincloud.net/Usuario/consul/" + this.m.usua_id, { responseType: "json" })
       .subscribe((res: any) => {
         console.log(res);
         this.m.usua_nom = res.usua_nom;
@@ -37,7 +37,7 @@ export class EditarUComponent implements OnInit {
   }
 
   actualizar(): void {
-    this.http.put("http://localhost:8989/Usuario/modif/" + this.m.usua_id, this.m)
+    this.http.put("http://petshouse.jelastic.saveincloud.net/Usuario/modif/" + this.m.usua_id, this.m)
       .subscribe((res: any) => {
         console.log(res);
         alert("Registrado Satisfactiamente");

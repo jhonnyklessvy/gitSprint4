@@ -19,7 +19,7 @@ export class NuevoPComponent implements OnInit {
   }
 
   guardar():void{
-    this.http.post("http://localhost:8989/Producto/crear",this.m)
+    this.http.post("http://petshouse.jelastic.saveincloud.net/Producto/crear",this.m)
     .subscribe((res:any)=>{
       console.log(res);
       alert("Registrado satisfactoriamente")

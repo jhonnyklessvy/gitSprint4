@@ -19,7 +19,7 @@ export class NuevoMComponent implements OnInit {
   }
 
   guardar():void{
-    this.http.post("http://localhost:8989/Mascota/crear",this.m)
+    this.http.post("http://petshouse.jelastic.saveincloud.net/Mascota/crear",this.m)
     .subscribe((res:any)=>{
       console.log(res);
       alert("Registrado satisfactoriamente")
