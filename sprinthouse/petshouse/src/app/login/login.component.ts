@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
             alert("No existe el registro");
           }
           else {
-            alert("Bienvenido  " + x.usua_nom +"   "+ x.usua_ape);
+            alert("Bienvenido  " + x.usua_nom +" "+ x.usua_ape);
             this.rou.navigate(["/menu/inicio"])
           }
 
